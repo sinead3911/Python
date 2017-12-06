@@ -1,6 +1,12 @@
+body {
+    background: no-repeat center fixed;
+    background-size: cover;
+}
+
 .navbar {
     background-image: none;
     background-color: black;
+    padding-bottom: 10px;
 }
 
 h3 {
@@ -30,12 +36,11 @@ h3 {
   	font-family: futura;
   	font-style: italic;
   	width: 100%;
-  	margin: 0 auto;
-  	text-align: center;
   	color: #313131;
   	font-size: 45px;
   	font-weight: bold;
   	position: absolute;
+  	margin-bottom: 20px;
 	animation: colorchange 20s infinite alternate;
   	-webkit-animation: colorchange 20s infinite alternate;
 }
@@ -75,3 +80,4 @@ h3 {
 	    color: pink;
   	}
 }
+

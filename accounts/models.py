@@ -12,7 +12,7 @@ class UserProfile(models.Model):
     image = models.ImageField(upload_to="avatars", blank=True, null=True, default="avatars/anonymous.png")
 
     def __str__(self):
-        return self.user
+        return "foo"
 
 @receiver(post_save, sender=User)
 def create_user_profile(sender, instance, created, **kwargs):
