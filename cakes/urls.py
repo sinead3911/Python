@@ -22,6 +22,12 @@ from accounts import urls as accounts_urls
 from cart import urls as cart_urls
 from checkout import urls as checkout_urls
 from products import urls as products_urls
+from aboutus import urls as aboutus_urls
+from contactus import urls as contactus_urls
+from flavours import urls as flavours_urls
+from booking import urls as booking_urls
+from faqs import urls as faqs_urls
+from news import urls as news_urls
 from django.views import static
 from .settings import MEDIA_ROOT
 from gallery import urls as gallery_urls
@@ -37,4 +43,11 @@ urlpatterns = [
     url(r'^checkout/', include(checkout_urls)),
     url(r'^media/(?P<path>.*)$', static.serve,{'document_root': MEDIA_ROOT}),
     url(r'^gallery/', include(gallery_urls)),
+    url(r'^aboutus/', include(aboutus_urls)),
+    url(r'^contactus/', include(contactus_urls)),
+    url(r'^flavours/', include(flavours_urls)),
+    url(r'^faqs/', include(faqs_urls)),
+    url(r'^news/', include(news_urls)),
+    url(r'^booking/', include(booking_urls)),
+
 ]

@@ -6,7 +6,7 @@ body {
 .navbar {
     background-image: none;
     background-color: black;
-    padding-bottom: 10px;
+    padding-bottom: 20px;
 }
 
 h3 {
@@ -23,10 +23,10 @@ h3 {
     background-color: orange;
 }
 
-.container {
-     margin-top: 100px;
+/*.container {*/
+/*     margin-top: 100%;*/
 
-}
+/*}*/
 
 .center {
   	margin: 0 auto;      

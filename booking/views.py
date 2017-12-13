@@ -3,7 +3,7 @@ from django.shortcuts import render
 # Create your views here.
 from django.shortcuts import render,redirect,get_object_or_404
 from .models import booking
-from .forms import  BookingForm
+from .forms import  booking
 
 # Create your views here.
 def get_index(request):
@@ -13,32 +13,32 @@ def get_index(request):
 def add_item(request):
     if request.method == "POST":
     # Get the details from the request
-        form = BookingForm(request.POST)
+        form = booking(request.POST)
     # Handle Saving to DB
         if form.is_valid():
             form.save()
             return redirect(get_index)
     else:
     # GET Request so just give them a blank form
-        form = BookingForm()    
+        form = booking()    
     
     return render(request, "item_form.html", { 'form': form }) 
     
 def get_item_form(request):
     
-    form = BookingForm()
+    form = booking()
     return render(request, "item_form.html", {'form: form'})
     
 def edit_item(request, id):
     item = get_object_or_404(booking, pk=id)
     
     if request.method == "POST":
-       form = BookingForm(request.POST, instance=item)
+       form = booking(request.POST, instance=item)
        if form.is_valid():
             form.save()
             return redirect(get_index)
     else:
-        form = BookingForm(instance=item)
+        form = booking(instance=item)
 
     return render(request, "item_form.html", { 'form': form })
     
